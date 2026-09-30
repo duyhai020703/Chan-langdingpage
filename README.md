@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quán CHẦN - Bò Tơ Nhúng & Nướng Tây Ninh (Vintage Style Website)
 
 Website marketing được thiết kế lại hoàn chỉnh theo **Style Vintage Retro Việt Nam**, đồng bộ 100% với nhận diện thương hiệu và bộ poster menu gốc trong thư mục `assets/images/My Documents [30-09-2026 10_31]`.
@@ -78,3 +79,6 @@ Trang web có riêng một khu vực triển lãm **Bộ Sưu Tập Poster & Men
 * **Địa Chỉ:** 27A Phan Chu Trinh, Phường Tân Ninh, TP. Tây Ninh
 * **Hotline:** 0988 272 727
 * **Phiếu Đặt Bàn:** Đặt chỗ online, chọn trước vị nước chần (Mãng Cầu / Thơm / Khế / Mẻ) và món ăn.
+=======
+# Chan-langdingpage
+>>>>>>> d7d21be1636a2c31a92646fac7a534461c42a647
