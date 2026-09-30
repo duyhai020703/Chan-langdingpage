@@ -5,10 +5,9 @@ Website marketing được thiết kế lại hoàn chỉnh theo **Style Vintage
 
 ---
 
-## 🌐 Link Website Đã Triển Khai (Live on Vercel)
+## 🌐 Link Website Đã Triển Khai 
 
-* **Trang web đang chạy trực tiếp:** [https://temporary-spry-teal-h2q1r9r.vercel.app](https://temporary-spry-teal-h2q1r9r.vercel.app)
-* **Link Claim về tài khoản Vercel chính thức của bạn:** [https://vercel.com/claim-deployment?code=0e1a1e9a-d38c-4986-be93-e604c3d08593](https://vercel.com/claim-deployment?code=0e1a1e9a-d38c-4986-be93-e604c3d08593) *(Chỉ cần mở link này khi đã đăng nhập Vercel để liên kết dự án vĩnh viễn)*
+* **Trang web đang chạy trực tiếp:** https://chan-langdingpage.vercel.app/
 
 ---
 
