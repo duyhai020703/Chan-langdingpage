@@ -1,0 +1,1220 @@
+/* ==========================================================================
+   QUÁN CHẦN - BÒ TƠ NHÚNG & NƯỚNG TÂY NINH
+   AUTHENTIC VINTAGE & RETRO VIETNAMESE DESIGN SYSTEM
+   Phong cách mộc mạc, biển hiệu bảng đen, tem phiếu & gạch bông Đông Dương
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap');
+
+:root {
+  /* Vintage Retro Color Palette (Matched from Quán Chần Posters) */
+  --vintage-bg: #f9f5ec;
+  --vintage-bg-alt: #f1ebd9;
+  --vintage-paper: #fffdf9;
+  --vintage-dark: #1f1a17;
+  --vintage-board: #1c2621; /* chalkboard green-black */
+  
+  --chan-yellow: #f59e0b;
+  --chan-gold: #f4a226;
+  --chan-mustard: #e69110;
+  --chan-red: #c22929;
+  --chan-red-dark: #9e1c1c;
+  --chan-green: #295135;
+  --chan-green-light: #3e734e;
+  --chan-blue: #1e6091;
+  --chan-cream: #faf5ea;
+
+  --text-main: #2b2520;
+  --text-muted: #6b635b;
+  --text-light: #fffdf9;
+
+  --border-vintage: #d8cdb8;
+  --border-dashed: 2px dashed #c4b59b;
+  --border-sawtooth: 4px solid var(--chan-red);
+
+  /* Fonts */
+  --font-retro-heading: 'Oswald', 'Playfair Display', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-hand: 'Caveat', cursive, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-retro: 4px 4px 0px rgba(43, 37, 32, 0.9);
+  --shadow-retro-lg: 8px 8px 0px rgba(43, 37, 32, 0.9);
+  --shadow-retro-yellow: 5px 5px 0px var(--chan-mustard);
+  --shadow-retro-red: 5px 5px 0px var(--chan-red-dark);
+  --shadow-soft: 0 10px 25px rgba(43, 37, 32, 0.08);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+  
+  --transition: 0.25s ease-in-out;
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--vintage-bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: radial-gradient(#dfd4be 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography & Badges */
+.font-handwriting {
+  font-family: var(--font-hand);
+}
+
+.font-retro {
+  font-family: var(--font-retro-heading);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.vintage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--chan-yellow);
+  color: var(--vintage-dark);
+  font-family: var(--font-retro-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--vintage-dark);
+  box-shadow: 3px 3px 0px var(--vintage-dark);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--font-retro-heading);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  color: var(--vintage-dark);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.section-title span.highlight-red {
+  color: var(--chan-red);
+}
+
+.section-title span.highlight-yellow {
+  background: var(--chan-yellow);
+  color: var(--vintage-dark);
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   SITE HEADER (VINTAGE WOODEN & RETRO BANNER)
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--vintage-paper);
+  border-bottom: 3px solid var(--vintage-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 10px 0;
+  transition: var(--transition);
+}
+
+.site-header.scrolled {
+  padding: 8px 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--vintage-dark);
+  overflow: hidden;
+  box-shadow: 2px 2px 0px var(--vintage-dark);
+}
+
+.logo-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text h1 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--vintage-dark);
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--chan-red);
+  letter-spacing: 1.2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-retro-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-main);
+  padding: 6px 4px;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--chan-red);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--chan-yellow);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-retro-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--vintage-dark);
+  box-shadow: var(--shadow-retro);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--vintage-dark);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--vintage-dark);
+}
+
+.btn-primary {
+  background: var(--chan-yellow);
+  color: var(--vintage-dark);
+}
+
+.btn-danger {
+  background: var(--chan-red);
+  color: #fff;
+}
+
+.btn-vintage-green {
+  background: var(--chan-green);
+  color: #fff;
+}
+
+.btn-tiktok {
+  background: #000;
+  color: #fff;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  font-size: 1.6rem;
+  color: var(--vintage-dark);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION (VINTAGE SIGNBOARD & CHALKBOARD VIBE)
+   ========================================================================== */
+.hero-vintage {
+  padding: 130px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-chalkboard {
+  background: var(--vintage-board);
+  color: #fff;
+  border: 8px solid #a3704c; /* wooden frame */
+  border-radius: var(--radius-md);
+  padding: 32px 36px;
+  box-shadow: var(--shadow-retro-lg);
+  position: relative;
+}
+
+.hero-chalkboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.chalk-quote {
+  font-family: var(--font-hand);
+  font-size: 2.1rem;
+  line-height: 1.4;
+  color: #fffae8;
+  margin-bottom: 24px;
+  border-bottom: 2px dashed rgba(255,255,255,0.25);
+  padding-bottom: 18px;
+}
+
+.chalk-quote span.chalk-highlight {
+  color: var(--chan-yellow);
+  text-decoration: underline wavy var(--chan-red);
+}
+
+.hero-subinfo {
+  font-size: 1.05rem;
+  color: #d8dbd5;
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+
+.hero-address-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-retro-heading);
+  font-size: 0.95rem;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  margin-bottom: 26px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Hero Right: Polaroid/Retro Photo Stacks */
+.hero-photo-showcase {
+  position: relative;
+}
+
+.polaroid-card {
+  background: #fff;
+  padding: 12px 12px 28px;
+  border: 2px solid var(--vintage-dark);
+  box-shadow: var(--shadow-retro-lg);
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.polaroid-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #e0d8c7;
+}
+
+.polaroid-caption {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  color: var(--vintage-dark);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.2;
+}
+
+.polaroid-badge-float {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: var(--chan-red);
+  color: #fff;
+  font-family: var(--font-retro-heading);
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border: 2px solid var(--vintage-dark);
+  box-shadow: 3px 3px 0px var(--vintage-dark);
+  transform: rotate(6deg);
+}
+
+/* ==========================================================================
+   VINTAGE PROMISES (4 ĐIỀU CHẦN CAM KẾT)
+   ========================================================================== */
+.commit-strip {
+  background: var(--chan-yellow);
+  border-top: 3px solid var(--vintage-dark);
+  border-bottom: 3px solid var(--vintage-dark);
+  padding: 24px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.commit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.commit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.commit-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--vintage-paper);
+  border: 2px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--chan-red);
+  box-shadow: 2px 2px 0px var(--vintage-dark);
+  flex-shrink: 0;
+}
+
+.commit-text h4 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.05rem;
+  color: var(--vintage-dark);
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.commit-text p {
+  font-size: 0.82rem;
+  color: #4a3e36;
+}
+
+/* ==========================================================================
+   OFFICIAL RESTAURANT MENU (100% TỪ ẢNH GỐC)
+   ========================================================================== */
+.menu-section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.menu-tabs-vintage {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 36px 0 45px;
+}
+
+.tab-btn-vintage {
+  font-family: var(--font-retro-heading);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  background: var(--vintage-paper);
+  border: 2px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  box-shadow: 3px 3px 0px var(--vintage-dark);
+  cursor: pointer;
+  color: var(--vintage-dark);
+  transition: transform 0.15s ease;
+}
+
+.tab-btn-vintage:hover {
+  transform: translate(-1px, -1px);
+  background: var(--vintage-bg-alt);
+}
+
+.tab-btn-vintage.active {
+  background: var(--chan-red);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--vintage-dark);
+}
+
+/* Menu Category Panes */
+.menu-pane {
+  display: none;
+  animation: fadeIn 0.35s ease forwards;
+}
+
+.menu-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Vintage Ticket / Poster Style Cards */
+.menu-featured-banner {
+  background: var(--vintage-paper);
+  border: 3px solid var(--vintage-dark);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  box-shadow: var(--shadow-retro-lg);
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.featured-header-tag {
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background: var(--chan-red);
+  color: #fff;
+  font-family: var(--font-retro-heading);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border: 2px solid var(--vintage-dark);
+  box-shadow: 2px 2px 0px var(--vintage-dark);
+}
+
+.banner-grid-combo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.combo-broth-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.broth-item {
+  background: #fbf0dc;
+  border: 2px solid var(--chan-mustard);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-retro-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--vintage-dark);
+}
+
+.meat-tags-grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.meat-tag {
+  background: #fde8e8;
+  border: 1px solid #f8b4b4;
+  color: var(--chan-red-dark);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.combo-price-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.combo-price-card {
+  background: #eef6f9;
+  border: 2px solid var(--chan-blue);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: center;
+}
+
+.combo-price-card.to-to {
+  background: #fff4e5;
+  border-color: var(--chan-mustard);
+}
+
+.combo-price-card h5 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.15rem;
+  color: var(--vintage-dark);
+  margin-bottom: 4px;
+}
+
+.combo-price-card .price {
+  font-family: var(--font-retro-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--chan-red);
+}
+
+/* Vintage Menu Grid */
+.menu-grid-vintage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.menu-card-retro {
+  background: var(--vintage-paper);
+  border: 2px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  box-shadow: var(--shadow-retro);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.menu-card-retro:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0px var(--vintage-dark);
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px dashed #ded4c1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.item-name {
+  font-family: var(--font-retro-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--vintage-dark);
+  text-transform: uppercase;
+}
+
+.item-price {
+  font-family: var(--font-retro-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--chan-red);
+  white-space: nowrap;
+}
+
+.item-subtext {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-mini-add {
+  font-family: var(--font-retro-heading);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: #faebd7;
+  border: 1px solid var(--vintage-dark);
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--vintage-dark);
+  transition: var(--transition);
+}
+
+.btn-mini-add:hover {
+  background: var(--chan-yellow);
+}
+
+/* ==========================================================================
+   ORIGINAL POSTER & MENU GALLERY LIGHTBOX SECTION
+   ========================================================================== */
+.gallery-section {
+  padding: 80px 0;
+  background: var(--vintage-bg-alt);
+  border-top: 3px solid var(--vintage-dark);
+  border-bottom: 3px solid var(--vintage-dark);
+}
+
+.gallery-posters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.poster-item {
+  background: #fff;
+  padding: 10px;
+  border: 2px solid var(--vintage-dark);
+  box-shadow: var(--shadow-retro);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  position: relative;
+}
+
+.poster-item:hover {
+  transform: translateY(-6px) rotate(1deg);
+  box-shadow: 7px 7px 0px var(--vintage-dark);
+}
+
+.poster-thumb-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.poster-thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.poster-item:hover .poster-thumb-box img {
+  transform: scale(1.05);
+}
+
+.poster-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 26, 23, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-retro-heading);
+  font-size: 1.1rem;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.poster-item:hover .poster-hover-overlay {
+  opacity: 1;
+}
+
+.poster-title {
+  font-family: var(--font-retro-heading);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--vintage-dark);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   TIKTOK & SOCIAL MARKETING SECTION
+   ========================================================================== */
+.tiktok-vintage {
+  padding: 90px 0;
+  position: relative;
+}
+
+.tiktok-banner-box {
+  background: #111;
+  color: #fff;
+  border: 3px solid var(--vintage-dark);
+  box-shadow: var(--shadow-retro-lg);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tiktok-profile-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.tiktok-avatar-vintage {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 2px solid #fe2c55;
+  overflow: hidden;
+}
+
+.tiktok-avatar-vintage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tiktok-user-meta h3 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+.tiktok-user-meta p {
+  color: #a8a29e;
+  font-size: 0.9rem;
+}
+
+.tiktok-video-card-retro {
+  background: var(--vintage-paper);
+  border: 2px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  box-shadow: var(--shadow-retro);
+  aspect-ratio: 9 / 16;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tiktok-video-card-retro:hover {
+  transform: translateY(-6px);
+  box-shadow: 6px 6px 0px var(--chan-red);
+}
+
+.video-thumb-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-gradient-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
+}
+
+.video-play-retro-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  background: var(--chan-red);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.video-caption-bottom {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  color: #fff;
+  z-index: 2;
+}
+
+.video-caption-bottom h5 {
+  font-family: var(--font-retro-heading);
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.video-stats-text {
+  font-size: 0.8rem;
+  color: #fbbf24;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   VINTAGE RESERVATION TICKET FORM (PHIẾU ĐẶT BÀN QUÁN CHẦN)
+   ========================================================================== */
+.reservation-section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.booking-ticket {
+  background: var(--vintage-paper);
+  border: 3px solid var(--vintage-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-retro-lg);
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.ticket-header-strip {
+  border-bottom: 3px dashed var(--vintage-dark);
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.ticket-header-strip h3 {
+  font-family: var(--font-retro-heading);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--chan-red);
+}
+
+.ticket-header-strip p {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: var(--text-muted);
+}
+
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field.full-span {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-family: var(--font-retro-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--vintage-dark);
+}
+
+.form-field input, .form-field select, .form-field textarea {
+  background: #fdfaf3;
+  border: 2px solid var(--vintage-dark);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--vintage-dark);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  outline: none;
+  border-color: var(--chan-red);
+  background: #fff;
+  box-shadow: 3px 3px 0px var(--chan-yellow);
+}
+
+/* ==========================================================================
+   VINTAGE FOOTER & LOCATION
+   ========================================================================== */
+.site-footer {
+  background: var(--vintage-dark);
+  color: #fff;
+  border-top: 5px solid var(--chan-yellow);
+  padding: 70px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand h2 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.8rem;
+  color: var(--chan-yellow);
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  color: #a8a29e;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.15rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--chan-red);
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #d6d3d1;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--chan-yellow);
+  padding-left: 4px;
+}
+
+.footer-bottom-copy {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  color: #78716c;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   FLOATING ACTION BUTTONS
+   ========================================================================== */
+.floating-actions {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--vintage-dark);
+  box-shadow: 3px 3px 0px var(--vintage-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.float-phone { background: #22c55e; }
+.float-tiktok { background: #000; }
+.float-book { background: var(--chan-red); }
+
+/* ==========================================================================
+   MODALS (MENU FULL VIEW & VIDEO PLAYER)
+   ========================================================================== */
+.vintage-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 25, 23, 0.88);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.vintage-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.vintage-modal-box {
+  background: var(--vintage-paper);
+  border: 4px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-retro-lg);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 24px;
+}
+
+.modal-close-retro {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  background: var(--chan-red);
+  color: #fff;
+  border: 2px solid var(--vintage-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 800;
+  box-shadow: 2px 2px 0px var(--vintage-dark);
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .banner-grid-combo {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 100vh;
+    background: var(--vintage-paper);
+    border-left: 3px solid var(--vintage-dark);
+    flex-direction: column;
+    padding: 80px 24px;
+    gap: 20px;
+    transition: 0.3s ease;
+    z-index: 998;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .mobile-toggle {
+    display: block;
+    z-index: 999;
+  }
+  .nav-actions .btn {
+    display: none;
+  }
+  .booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
