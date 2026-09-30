@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://chan-langdingpage.vercel.app/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/logo-chan.jpg</image:loc>
+      <image:title>Logo Quán CHẦN - Bò Tơ Nhúng và Nướng Tây Ninh</image:title>
+      <image:caption>Thương hiệu đặc sản bò tơ trứ danh tại 27A Phan Chu Trinh, Tây Ninh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/menu-combo-chan.jpg</image:loc>
+      <image:title>Combo Chần 4 Loại Nước: Mãng Cầu, Thơm, Khế, Mẻ</image:title>
+      <image:caption>Đặc sản bò tơ nhúng độc đáo tại Quán Chần Tây Ninh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/menu-nuong-tang.jpg</image:loc>
+      <image:title>Bò Tơ Nướng Than Hoa Tảng 1KG Cáy Tỏi và Lụi Sả</image:title>
+      <image:caption>Trải nghiệm nướng than hoa tùng xẻo tại bàn thơm ngon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/bang-hieu-chan.jpg</image:loc>
+      <image:title>Bảng hiệu phấn vintage Quán Chần 27A Phan Chu Trinh</image:title>
+      <image:caption>Kẻ môi, Kẻ mắt, Kẻ mày - Kẻ chần, Kẻ nướng, Kẻ không ăn hành</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/menu-an-choi-no.jpg</image:loc>
+      <image:title>Thực đơn Món Ăn Chơi và Ăn No Quán Chần Tây Ninh</image:title>
+      <image:caption>Cơm thố đất, mì xào bò tơ, gỏi càng cua me cay, bò cháy tiêu xanh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://chan-langdingpage.vercel.app/assets/images/menu-do-uong-ruou.jpg</image:loc>
+      <image:title>Thực đơn Rượu Nam Phong, Rượu Dâu Tằm và Bia Đã Khát</image:title>
+      <image:caption>Đồ uống phong phú chuẩn tiệc họp mặt và lai rai bạn bè</image:caption>
+    </image:image>
+  </url>
+</urlset>

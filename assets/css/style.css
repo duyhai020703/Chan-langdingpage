@@ -1173,6 +1173,100 @@ img {
   z-index: 10;
 }
 
+/* ==========================================================================
+   SEO FAQ ACCORDION SECTION (HỎI ĐÁP QUÁN CHẦN TÂY NINH)
+   ========================================================================== */
+.faq-section {
+  padding: 85px 0;
+  background: var(--vintage-bg);
+  position: relative;
+}
+
+.faq-container {
+  max-width: 860px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--vintage-paper);
+  border: 2px solid var(--vintage-dark);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-retro);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 6px 6px 0px var(--vintage-dark);
+}
+
+.faq-question {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  user-select: none;
+}
+
+.faq-question h3 {
+  font-family: var(--font-retro-heading);
+  font-size: 1.18rem;
+  color: var(--vintage-dark);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.faq-toggle-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--vintage-bg-alt);
+  border: 2px solid var(--vintage-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--chan-red);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.faq-item.active .faq-toggle-icon {
+  transform: rotate(180deg);
+  background: var(--chan-yellow);
+  color: var(--vintage-dark);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  background: #fdfaf3;
+  border-top: 0px solid transparent;
+  padding: 0 24px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 16px 24px 22px;
+  border-top: 1px dashed #ded4c1;
+}
+
+.faq-answer p {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.faq-answer strong {
+  color: var(--vintage-dark);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid {
@@ -1218,3 +1312,4 @@ img {
     grid-template-columns: 1fr;
   }
 }
+

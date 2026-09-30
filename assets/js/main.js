@@ -144,4 +144,23 @@ document.addEventListener('DOMContentLoaded', () => {
     bookDate.setAttribute('min', today);
     bookDate.value = today;
   }
+
+  // 7. FAQ Accordion Interaction
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('active');
+      
+      // Close other items
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) other.classList.remove('active');
+      });
+
+      // Toggle current
+      item.classList.toggle('active', !isOpen);
+    });
+  });
 });
+
